@@ -69,11 +69,11 @@ server {
 		# With php5-cgi alone:
 	#	fastcgi_pass 127.0.0.1:9000;
 	#	# With php5-fpm:
-		fastcgi_pass unix:/var/run/php5-fpm.sock;
+		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
 		fastcgi_index index.php;
 		include fastcgi_params;
                 fastcgi_param HTTPS on;
-
+                fastcgi_param SCRIPT_FILENAME $request_filename;
 	}
 
 	# deny access to .htaccess files, if Apache's document root
@@ -86,6 +86,7 @@ server {
 	location /RPC2 {
         	include scgi_params;
 	        scgi_pass 127.0.0.1:5000;
+                scgi_param SCRIPT_NAME /RPC2;
 	}
 
 }

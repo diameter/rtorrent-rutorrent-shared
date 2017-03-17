@@ -26,6 +26,8 @@ site=rutorrent-tls.nginx
 fi
 
 cp /root/$site /etc/nginx/sites-enabled/
+[ -n "$NOIPV6" ] && sed -i 's/listen \[::\]:/#/g' /etc/nginx/sites-enabled/$site
+
 
 # Check if .htpasswd presents
 if [ -e /downloads/.htpasswd ]; then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 # Some of this was copied from http://pulsedmedia.com/remote/autodl.txt
 
 # For new installs, we need to wait and ensure that the user gets created.
@@ -19,7 +19,7 @@ else
 	echo "Do not need to relink the autodl config directory."
 fi
 
-if [ -s /downloads/.autodl/autodl.cfg ]
+if [ -f /downloads/.autodl/autodl.cfg ]
 then
 	echo "Found an existing autodl configs. Will not reinitialize."
 	irssi_port=$(grep gui-server-port /downloads/.autodl/autodl2.cfg | awk '{print $3}')

@@ -36,9 +36,6 @@ server {
 
 	# Make site accessible from http://localhost/
 	server_name localhost;
-	
-	# Automatically redirect HTTP requests on this port to HTTPS
-	error_page 497 https://{$server_name}:{$server_port}/${request_uri}
 
 	location / {
 		# First attempt to serve request as file, then

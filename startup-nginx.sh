@@ -6,6 +6,8 @@ chown -R www-data:www-data /var/www/rutorrent
 cp /downloads/.htpasswd /var/www/rutorrent/
 mkdir -p /downloads/.rutorrent/torrents
 chown -R www-data:www-data /downloads/.rutorrent
+mkdir -p /downloads/.log/nginx
+chown www-data:www-data /downloads/.log/nginx
 
 rm -f /etc/nginx/sites-enabled/*
 

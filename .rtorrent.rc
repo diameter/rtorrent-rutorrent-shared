@@ -5,7 +5,7 @@
 scgi_port=127.0.0.1:5000
 encoding_list = UTF-8
 
-log.open_file = "rtorrent.log", "/downloads/log/rtorrent.log"
+log.open_file = "rtorrent.log", "/downloads/.log/rtorrent/rtorrent.log"
 log.add_output = "info", "rtorrent.log"
 log.add_output = "critical", "rtorrent.log"
 log.add_output = "error", "rtorrent.log"

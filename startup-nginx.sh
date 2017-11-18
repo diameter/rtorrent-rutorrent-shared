@@ -39,5 +39,6 @@ else
     sed -i 's/auth_basic/#auth_basic/g' /etc/nginx/sites-enabled/$site
 fi
 
+mkdir -p /run/nginx
 nginx -g "daemon off;"
 

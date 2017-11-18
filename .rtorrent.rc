@@ -14,6 +14,8 @@ log.add_output = "error", "rtorrent.log"
 #log.add_output = "info", "rtorrent.log"
 #log.add_output = "debug", "rtorrent.log"
 
+execute2 = {sh,-c,/usr/bin/php /var/www/rutorrent/php/initplugins.php &}
+
 # Maximum and minimum number of peers to connect to per torrent.
 throttle.min_peers.normal.set = 40
 throttle.max_peers.normal.set = 50

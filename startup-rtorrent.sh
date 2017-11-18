@@ -13,6 +13,8 @@ useradd -u $RT_UID -g $RT_GID -d /home/rtorrent -m -s /bin/bash rtorrent
 # arrange dirs and configs
 mkdir -p /downloads/.rtorrent/session 
 mkdir -p /downloads/.rtorrent/watch
+mkdir -p /downloads/log
+chmod -R 777 /downloads/log
 if [ ! -e /downloads/.rtorrent/.rtorrent.rc ]; then
     cp /root/.rtorrent.rc /downloads/.rtorrent/
 fi

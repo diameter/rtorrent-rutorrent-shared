@@ -1,6 +1,13 @@
 #!/usr/bin/env sh
 # Some of this was copied from http://pulsedmedia.com/remote/autodl.txt
 
+if [ -n "$NO_IRSSI" ]
+then
+	echo NO_IRSSI set, skipping IRSSI-AutoDL
+	exit
+fi
+
+
 # For new installs, we need to wait and ensure that the user gets created.
 sleep 5
 

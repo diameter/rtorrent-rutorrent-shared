@@ -4,7 +4,7 @@
 if [ -n "$NO_IRSSI" ]
 then
 	echo NO_IRSSI set, skipping IRSSI-AutoDL
-	exit
+	exit 15
 fi
 
 

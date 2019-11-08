@@ -52,6 +52,7 @@ then
 	rm autodl-irssi.zip
 	cp autodl-irssi.pl autorun/
 	chown -R rtorrent:rtorrent /home/rtorrent/.irssi
+	sed -i -e 's/1.86/1.84/g' /home/rtorrent/.irssi/scripts/AutodlIrssi/SslSocket.pm
 else
 	echo "Found irssi scripts are installed. Skipping install."
 fi

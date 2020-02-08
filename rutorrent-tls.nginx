@@ -75,6 +75,8 @@ server {
 		include fastcgi_params;
                 fastcgi_param HTTPS on;
                 fastcgi_param SCRIPT_FILENAME $request_filename;
+		auth_basic "Restricted";
+		auth_basic_user_file /var/www/rutorrent/.htpasswd;
 	}
 
 	# deny access to .htaccess files, if Apache's document root
@@ -88,6 +90,8 @@ server {
         	include scgi_params;
 	        scgi_pass 127.0.0.1:5000;
                 scgi_param SCRIPT_NAME /RPC2;
+		auth_basic "Restricted";
+		auth_basic_user_file /var/www/rutorrent/.htpasswd;
 	}
 
 }
